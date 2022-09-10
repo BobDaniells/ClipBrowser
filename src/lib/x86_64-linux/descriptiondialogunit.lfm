@@ -1,0 +1,62 @@
+object DescriptionDialog: TDescriptionDialog
+  Left = 377
+  Height = 359
+  Top = 204
+  Width = 561
+  Caption = 'Description Dialog'
+  ClientHeight = 359
+  ClientWidth = 561
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object BottomPanel: TPanel
+    Left = 0
+    Height = 50
+    Top = 309
+    Width = 561
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 561
+    TabOrder = 0
+    object ButtonPanel: TPanel
+      Left = 390
+      Height = 48
+      Top = 1
+      Width = 170
+      Align = alRight
+      ClientHeight = 48
+      ClientWidth = 170
+      TabOrder = 0
+      object CloseButton: TButton
+        Left = 87
+        Height = 25
+        Top = 9
+        Width = 75
+        Caption = 'Close'
+        ModalResult = 1
+        OnClick = CloseButtonClick
+        TabOrder = 0
+      end
+      object CancelButton: TButton
+        Left = 6
+        Height = 25
+        Top = 9
+        Width = 75
+        Cancel = True
+        Caption = 'Cancel'
+        ModalResult = 2
+        OnClick = CancelButtonClick
+        TabOrder = 1
+      end
+    end
+  end
+  object DescriptionMemo: TMemo
+    Left = 0
+    Height = 309
+    Top = 0
+    Width = 561
+    Align = alClient
+    OnChange = DescriptionMemoChange
+    TabOrder = 1
+    WantTabs = True
+  end
+end

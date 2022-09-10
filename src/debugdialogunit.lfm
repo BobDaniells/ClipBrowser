@@ -1,0 +1,40 @@
+object DebugDialog: TDebugDialog
+  Left = 231
+  Height = 613
+  Top = 47
+  Width = 1010
+  Caption = 'DebugDialog'
+  ClientHeight = 613
+  ClientWidth = 1010
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 563
+    Width = 1010
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 1010
+    TabOrder = 0
+    object CloseButton: TButton
+      Left = 918
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Close'
+      TabOrder = 0
+    end
+  end
+  object DebugMemo: TMemo
+    Left = 0
+    Height = 563
+    Top = 0
+    Width = 1010
+    Align = alClient
+    Lines.Strings = (
+      'DebugMemo'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+  end
+end

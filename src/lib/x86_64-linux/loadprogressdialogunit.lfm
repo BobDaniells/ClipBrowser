@@ -1,0 +1,54 @@
+object LoadProgressDialog: TLoadProgressDialog
+  Left = 425
+  Height = 100
+  Top = 143
+  Width = 438
+  BorderStyle = bsDialog
+  Caption = 'Load Progress'
+  ClientHeight = 100
+  ClientWidth = 438
+  Position = poMainFormCenter
+  LCLVersion = '2.0.10.0'
+  object CloseButton: TButton
+    Left = 355
+    Height = 25
+    Top = 70
+    Width = 75
+    Caption = 'Close'
+    Default = True
+    ModalResult = 1
+    OnClick = CloseButtonClick
+    TabOrder = 0
+  end
+  object BGRAFlashProgressBar1: TBGRAFlashProgressBar
+    Left = 8
+    Height = 33
+    Top = 8
+    Width = 422
+    MinValue = 0
+    MaxValue = 100
+    Value = 30
+    BarColor = 14852966
+    BackgroundColor = 3092271
+    BackgroundRandomizeMinIntensity = 4000
+    BackgroundRandomizeMaxIntensity = 5000
+    BackgroundRandomize = True
+  end
+  object MaxLabel: TLabel
+    Left = 409
+    Height = 16
+    Top = 44
+    Width = 8
+    Alignment = taRightJustify
+    Caption = '0'
+    ParentColor = False
+  end
+  object CountLabel: TLabel
+    Left = 161
+    Height = 16
+    Top = 44
+    Width = 107
+    Caption = 'Loaded Count = 0'
+    ParentColor = False
+  end
+end

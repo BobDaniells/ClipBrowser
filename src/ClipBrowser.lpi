@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="11"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="ClipBrowser"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MinorVersionNr Value="9"/>
+      <RevisionNr Value="1"/>
+      <BuildNr Value="1"/>
+      <StringTable CompanyName="Bob Daniells" FileDescription="Clip Browser" InternalName="ClipBrowser" LegalCopyright="Bob Daniells" ProductName="ClipBrowser"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0"/>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="bgracontrols"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="PasLibVlcPlayer"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="lazvlc"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="27">
+      <Unit0>
+        <Filename Value="ClipBrowser.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="clipbrowsermain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ClipBrowserMain"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="modelunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ModelUnit"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="globalsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="mediaplayerunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VideoPlayer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MediaPlayerUnit"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="imagepanelunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ImagePanelUnit"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="pix/linuxparamsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LinuxParamsUnit"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="thumbunit.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="ratingdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RatingDialogForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="setplayerdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SetPlayerDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SetPlayerDialogUnit"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="thumbviewunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ThumbViewUnit"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="thumbfaildialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ThumbFailDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ThumbFailDialogUnit"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="loadprogressdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LoadProgressDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="LoadProgressDialogUnit"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="editkeywordsdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EditKeywordsDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="EditKeywordsDialogunit"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="keywordfilterunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="KeywordFilterUnit"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="editclassificationdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EditClassificationDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="classificationfilterunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ClassificationsFilterDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ClassificationFilterUnit"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="processanimationdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ProcessAnimationDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ProcessAnimationDialogUnit"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="changepinunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ChangePINDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ChangePINUnit"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="additionalfilterdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AdditionalFilterDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AdditionalFilterDialogUnit"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../PasLibVlc/Lazarus/PasLibVlcPlayer.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../PasLibVlc/Lazarus/PasLibVlcPlayer.lpk"/>
+        <IsPartOfProject Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="videodocumentsdialogunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AssociatedDocumentsDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="aboutunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AboutUnit"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="testdataunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestDataUnit"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="userunit.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="clipparametersunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ParametersDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit26>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="ClipBrowser"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir);../../ccr/mORMot;../../ccr/mORMot/SQLite3"/>
+      <Libraries Value="../../ccr/mORMot;../../ccr/mORMot/SQLite3"/>
+      <OtherUnitFiles Value="../../ccr/mORMot;../../ccr/mORMot/SQLite3;../../PasLibVlc/Lazarus"/>
+      <UnitOutputDirectory Value="/home/bob/LazarusProjects/ClipBrowser/lib/x86_64-linux"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <TargetCPU Value="x86_64"/>
+      <TargetOS Value="linux"/>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2"/>
+      </Debugging>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <IgnoredMessages idx6058="True"/>
+      </CompilerMessages>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="5">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="ESQLite3Exception"/>
+      </Item4>
+      <Item5>
+        <Name Value="EHTTPClient"/>
+      </Item5>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

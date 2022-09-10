@@ -1,0 +1,57 @@
+object ThumbFailDialog: TThumbFailDialog
+  Left = 306
+  Height = 287
+  Top = 232
+  Width = 913
+  HorzScrollBar.Smooth = True
+  HorzScrollBar.Tracking = True
+  VertScrollBar.Smooth = True
+  VertScrollBar.Tracking = True
+  BorderStyle = bsDialog
+  Caption = 'Thumb Fail Dialog'
+  ClientHeight = 287
+  ClientWidth = 913
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.10.0'
+  object HeadingMemo: TMemo
+    Left = 8
+    Height = 96
+    Top = 8
+    Width = 894
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      'HeadingMemo'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object OKButton: TButton
+    Left = 829
+    Height = 25
+    Top = 258
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    OnClick = OKButtonClick
+    TabOrder = 1
+  end
+  object ErrorMemo: TMemo
+    Left = 9
+    Height = 136
+    Top = 114
+    Width = 894
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Lines.Strings = (
+      'ErrorMemo'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 2
+  end
+end

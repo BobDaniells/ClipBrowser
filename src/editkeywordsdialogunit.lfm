@@ -1,0 +1,69 @@
+object EditKeywordsDialog: TEditKeywordsDialog
+  Left = 518
+  Height = 337
+  Top = 160
+  Width = 432
+  Caption = 'Edit Keywords'
+  ClientHeight = 337
+  ClientWidth = 432
+  OnCloseQuery = FormCloseQuery
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 287
+    Width = 432
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 432
+    TabOrder = 0
+    object CloseButton: TButton
+      Left = 343
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Close'
+      OnClick = CloseButtonClick
+      TabOrder = 0
+    end
+    object AddButton: TButton
+      Left = 17
+      Height = 25
+      Top = 16
+      Width = 90
+      Caption = '&Add Keyword'
+      OnClick = AddButtonClick
+      TabOrder = 1
+    end
+    object AddYTKeywordsButton: TButton
+      Left = 143
+      Height = 25
+      Top = 16
+      Width = 163
+      Caption = 'Add YouTube Keywords'
+      OnClick = AddYTKeywordsButtonClick
+      TabOrder = 2
+    end
+  end
+  object KeywordsListBox: TListBox
+    Left = 18
+    Height = 240
+    Top = 56
+    Width = 398
+    ItemHeight = 0
+    OnKeyUp = KeywordsListBoxKeyUp
+    ScrollWidth = 396
+    Sorted = True
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object KeywordSearchEdit: TEdit
+    Left = 18
+    Height = 27
+    Top = 18
+    Width = 398
+    OnKeyUp = KeywordSearchEditKeyUp
+    TabOrder = 2
+    Text = 'KeywordSearchEdit'
+  end
+end

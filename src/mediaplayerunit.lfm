@@ -1,0 +1,62 @@
+object VideoPlayer: TVideoPlayer
+  Left = 412
+  Height = 405
+  Top = 205
+  Width = 823
+  Caption = 'Video Player'
+  ClientHeight = 405
+  ClientWidth = 823
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.0.10.0'
+  object ControlsPanel: TPanel
+    Left = 0
+    Height = 50
+    Top = 355
+    Width = 823
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 823
+    TabOrder = 0
+    object PlaySpeedButton: TSpeedButton
+      Left = 6
+      Height = 22
+      Top = 8
+      Width = 23
+      Caption = '>'
+    end
+    object TrackBar1: TTrackBar
+      Left = 40
+      Height = 37
+      Top = 6
+      Width = 240
+      Position = 0
+      TickMarks = tmBoth
+      TabOrder = 0
+    end
+    object TrackBar2: TTrackBar
+      Left = 291
+      Height = 100
+      Top = 6
+      Width = 37
+      Orientation = trVertical
+      Position = 0
+      Reversed = True
+      TabOrder = 1
+      Visible = False
+    end
+  end
+  object VlcPlayer: TPasLibVlcPlayer
+    Left = 0
+    Height = 355
+    Top = 0
+    Width = 823
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Vlc Player'
+    ParentColor = False
+    TabOrder = 1
+    SnapShotFmt = 'png'
+    MouseEventsHandler = mehComponent
+  end
+end

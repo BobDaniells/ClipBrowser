@@ -1,0 +1,109 @@
+object EditKeywordsDialog: TEditKeywordsDialog
+  Left = 518
+  Height = 337
+  Top = 160
+  Width = 657
+  Caption = 'Edit Keywords'
+  ClientHeight = 337
+  ClientWidth = 657
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object ListBox1: TListBox
+    Left = 440
+    Height = 163
+    Top = 117
+    Width = 168
+    ItemHeight = 0
+    PopupMenu = PopupMenu1
+    ScrollWidth = 166
+    TabOrder = 0
+    TopIndex = -1
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 46
+    Top = 25
+    Width = 344
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 1
+  end
+  object TitleLabel: TLabel
+    Left = 8
+    Height = 14
+    Top = 4
+    Width = 7
+    Caption = 'x'
+    ParentColor = False
+  end
+  object KeywordsLabel: TLabel
+    Left = 440
+    Height = 14
+    Top = 102
+    Width = 120
+    Caption = '(Right-Click to edit...'
+    ParentColor = False
+  end
+  object StoredKeywordsListBox: TListBox
+    Left = 8
+    Height = 168
+    Top = 104
+    Width = 168
+    ItemHeight = 0
+    ScrollWidth = 166
+    TabOrder = 2
+    TopIndex = -1
+  end
+  object Label1: TLabel
+    Left = 12
+    Height = 14
+    Top = 87
+    Width = 111
+    Caption = 'Stored Keywords...'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 441
+    Height = 14
+    Top = 87
+    Width = 129
+    Caption = 'Keywords for this clip'
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 287
+    Width = 657
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 657
+    TabOrder = 3
+    object CloseButton: TButton
+      Left = 568
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Close'
+      OnClick = CloseButtonClick
+      TabOrder = 0
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 392
+    Top = 24
+    object AddMenuItem: TMenuItem
+      Caption = 'Add Keyword'
+      OnClick = AddMenuItemClick
+    end
+    object EditMenuItem: TMenuItem
+      Caption = 'Edit Selected Keyword'
+      OnClick = EditMenuItemClick
+    end
+    object DeleteMenuItem: TMenuItem
+      Caption = 'Delete Selected Keyword'
+      OnClick = DeleteMenuItemClick
+    end
+  end
+end

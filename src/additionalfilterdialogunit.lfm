@@ -1,0 +1,218 @@
+object AdditionalFilterDialog: TAdditionalFilterDialog
+  Left = 151
+  Height = 477
+  Top = 166
+  Width = 514
+  BorderStyle = bsDialog
+  Caption = 'AdditionalFilterDialog'
+  ClientHeight = 477
+  ClientWidth = 514
+  Font.Height = -13
+  Font.Name = 'Sans'
+  Font.Style = [fsBold]
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object BottomPanel: TPanel
+    Left = 0
+    Height = 50
+    Top = 427
+    Width = 514
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 514
+    TabOrder = 0
+    object ButtonPanel: TPanel
+      Left = 248
+      Height = 48
+      Top = 1
+      Width = 265
+      Align = alRight
+      ClientHeight = 48
+      ClientWidth = 265
+      TabOrder = 0
+      object ClearButton: TButton
+        Left = 9
+        Height = 25
+        Top = 13
+        Width = 75
+        Caption = 'Clear'
+        OnClick = ClearButtonClick
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Left = 95
+        Height = 25
+        Top = 13
+        Width = 75
+        Cancel = True
+        Caption = 'Cancel'
+        ModalResult = 2
+        OnClick = Button2Click
+        TabOrder = 1
+      end
+      object ApplyButton: TButton
+        Left = 183
+        Height = 25
+        Top = 13
+        Width = 75
+        Caption = 'Apply'
+        Default = True
+        ModalResult = 1
+        OnClick = ApplyButtonClick
+        TabOrder = 2
+      end
+    end
+  end
+  object CategoriesGroupBox: TGroupBox
+    Left = 8
+    Height = 157
+    Top = 8
+    Width = 248
+    Caption = 'Categories:'
+    ClientHeight = 139
+    ClientWidth = 246
+    TabOrder = 1
+    object ScrollBox1: TScrollBox
+      Left = 12
+      Height = 150
+      Top = 0
+      Width = 204
+      HorzScrollBar.Page = 100
+      ClientHeight = 148
+      ClientWidth = 202
+      TabOrder = 0
+      object CategoriesCheckListBox: TCheckListBox
+        Left = 0
+        Height = 148
+        Top = 0
+        Width = 202
+        Align = alClient
+        ItemHeight = 0
+        TabOrder = 0
+        TopIndex = -1
+      end
+    end
+  end
+  object KeywordsGroupBox: TGroupBox
+    Left = 8
+    Height = 248
+    Top = 176
+    Width = 494
+    Caption = 'Keywords:'
+    ClientHeight = 230
+    ClientWidth = 492
+    TabOrder = 2
+    object ScrollBox2: TScrollBox
+      Left = 271
+      Height = 221
+      Top = 0
+      Width = 212
+      HorzScrollBar.Page = 203
+      VertScrollBar.Page = 210
+      ClientHeight = 219
+      ClientWidth = 210
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 12
+        Height = 15
+        Top = 53
+        Width = 191
+        Caption = 'Filter on These Keywords:'
+        ParentColor = False
+      end
+      object ActiveKeywordsListBox: TListBox
+        Left = 14
+        Height = 136
+        Top = 74
+        Width = 186
+        ItemHeight = 0
+        ScrollWidth = 184
+        TabOrder = 0
+        TopIndex = -1
+      end
+    end
+    object ScrollBox3: TScrollBox
+      Left = 12
+      Height = 221
+      Top = 0
+      Width = 204
+      HorzScrollBar.Page = 194
+      VertScrollBar.Page = 210
+      ClientHeight = 219
+      ClientWidth = 202
+      TabOrder = 1
+      object SuggestedKeywordsCheckGroup: TCheckGroup
+        Left = 8
+        Height = 131
+        Top = 79
+        Width = 186
+        AutoFill = True
+        Caption = 'Suggested Keywords:'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 1
+        ClientHeight = 113
+        ClientWidth = 184
+        PopupMenu = KeywordPopupMenu
+        TabOrder = 0
+        object SuggestedKeywordsListBox: TListBox
+          Left = 6
+          Height = 101
+          Top = 6
+          Width = 172
+          ItemHeight = 0
+          ScrollWidth = 170
+          TabOrder = 0
+          TopIndex = -1
+        end
+      end
+      object KeywordSearchEdit: TEdit
+        Left = 10
+        Height = 27
+        Top = 47
+        Width = 182
+        OnKeyUp = KeywordSearchEditKeyUp
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        Left = 12
+        Height = 15
+        Top = 22
+        Width = 158
+        Caption = 'Select Keyword Here:'
+        ParentColor = False
+      end
+    end
+    object AddKeywordsSpeedButton: TSpeedButton
+      Left = 232
+      Height = 22
+      Top = 94
+      Width = 23
+      Caption = '->'
+      OnClick = AddKeywordsSpeedButtonClick
+    end
+    object RemoveKeywordsSpeedButton: TSpeedButton
+      Left = 232
+      Height = 22
+      Top = 126
+      Width = 23
+      Caption = '<-'
+      OnClick = RemoveKeywordsSpeedButtonClick
+    end
+  end
+  object KeywordPopupMenu: TPopupMenu
+    Left = 272
+    Top = 35
+    object AddKeywordMenuItem: TMenuItem
+      Caption = 'AddKeywordMenuItem'
+      OnClick = AddKeywordMenuItemClick
+    end
+  end
+end

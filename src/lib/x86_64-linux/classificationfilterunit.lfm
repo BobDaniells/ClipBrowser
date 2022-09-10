@@ -1,0 +1,75 @@
+object ClassificationsFilterDialog: TClassificationsFilterDialog
+  Left = 425
+  Height = 190
+  Top = 138
+  Width = 320
+  BorderStyle = bsDialog
+  Caption = 'Classifications Filter'
+  ClientHeight = 190
+  ClientWidth = 320
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 140
+    Width = 320
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 320
+    TabOrder = 0
+    object ApplyButton: TButton
+      Left = 237
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Apply'
+      Default = True
+      ModalResult = 1
+      OnClick = ApplyButtonClick
+      TabOrder = 0
+    end
+    object CancelButton: TButton
+      Left = 152
+      Height = 25
+      Top = 8
+      Width = 75
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      OnClick = CancelButtonClick
+      TabOrder = 1
+    end
+  end
+  object CheckGroup1: TCheckGroup
+    Left = 61
+    Height = 105
+    Top = 12
+    Width = 185
+    AutoFill = True
+    Caption = 'CheckGroup1'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 88
+    ClientWidth = 183
+    Items.Strings = (
+      'G'
+      'PG'
+      'R'
+      'X'
+      'All'
+    )
+    OnItemClick = CheckGroup1ItemClick
+    OnKeyDown = CheckGroup1KeyDown
+    TabOrder = 1
+    Data = {
+      050000000202020202
+    }
+  end
+end

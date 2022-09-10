@@ -1,0 +1,42 @@
+object KeywordFilterDialog: TKeywordFilterDialog
+  Left = 425
+  Height = 240
+  Top = 155
+  Width = 311
+  BorderStyle = bsToolWindow
+  Caption = 'Keyword Filter Dialog'
+  ClientHeight = 240
+  ClientWidth = 311
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object FilterListBox: TListBox
+    Left = 8
+    Height = 192
+    Top = 8
+    Width = 141
+    ItemHeight = 0
+    MultiSelect = True
+    ScrollWidth = 139
+    TabOrder = 0
+    TopIndex = -1
+  end
+  object SelectButton1: TButton
+    Left = 229
+    Height = 25
+    Top = 206
+    Width = 75
+    Caption = 'Select'
+    ModalResult = 1
+    OnClick = SelectButton1Click
+    TabOrder = 1
+  end
+  object ClearButton: TButton
+    Left = 152
+    Height = 25
+    Top = 206
+    Width = 75
+    Caption = 'Clear'
+    OnClick = ClearButtonClick
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,554 @@
+object MainForm: TMainForm
+  Left = 445
+  Height = 467
+  Top = 71
+  Width = 804
+  HorzScrollBar.Page = 801
+  VertScrollBar.Page = 1
+  AllowDropFiles = True
+  Caption = 'Clip Browser'
+  ClientHeight = 467
+  ClientWidth = 804
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDropFiles = FormDropFiles
+  OnMouseWheelDown = FormMouseWheelDown
+  OnMouseWheelUp = FormMouseWheelUp
+  OnResize = FormResize
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 60
+    Top = 0
+    Width = 804
+    Align = alTop
+    Caption = 'Panel1'
+    ClientHeight = 60
+    ClientWidth = 804
+    TabOrder = 0
+    object SearchPanel: TPanel
+      Left = 469
+      Height = 58
+      Top = 1
+      Width = 334
+      Align = alRight
+      ClientHeight = 58
+      ClientWidth = 334
+      TabOrder = 0
+      object Label1: TLabel
+        Left = -2
+        Height = 14
+        Top = -1
+        Width = 72
+        Caption = 'Title Filter:'
+        Font.Color = clMaroon
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object ButtonPanel: TPanel
+        Left = -38
+        Height = 56
+        Top = 1
+        Width = 39
+        Align = alRight
+        TabOrder = 0
+      end
+      object AdditionalFiltersButton: TButton
+        Left = 73
+        Height = 22
+        Top = 32
+        Width = 143
+        Action = AdditionalFilterAction
+        Caption = 'Additional Filters'
+        Color = clInfoBk
+        TabOrder = 2
+      end
+      object TitleFilterClearPanel: TPanel
+        Left = 256
+        Height = 25
+        Top = 0
+        Width = 25
+        Caption = 'X'
+        Color = clMoneyGreen
+        Font.Color = clMaroon
+        Font.Height = -16
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 3
+      end
+      object SearchPanel1: TPanel
+        Left = -1
+        Height = 56
+        Top = 1
+        Width = 334
+        Align = alRight
+        ClientHeight = 56
+        ClientWidth = 334
+        TabOrder = 4
+        object Label3: TLabel
+          Left = 0
+          Height = 14
+          Top = -1
+          Width = 72
+          Caption = 'Title Filter:'
+          Font.Color = clMaroon
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object TotalClipsLabel: TLabel
+          Left = 224
+          Height = 14
+          Top = 34
+          Width = 7
+          Caption = 'x'
+          Font.Color = clMaroon
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object ClearFilterSpeedButton: TSpeedButton
+          Left = 259
+          Height = 26
+          Top = -1
+          Width = 46
+          Action = ClearFilterAction
+          Color = clMoneyGreen
+          Font.Style = [fsBold]
+          Transparent = False
+          ParentFont = False
+        end
+        object PINResetLabel: TLabel
+          Left = 312
+          Height = 14
+          Top = 6
+          Width = 8
+          Caption = 'o'
+          ParentColor = False
+          OnClick = PINResetLabelClick
+        end
+        object AdditionalFiltersSpeedButton: TSpeedButton
+          Left = 80
+          Height = 22
+          Top = 29
+          Width = 142
+          Action = AdditionalFilterAction
+          Caption = 'Additional Filters'
+        end
+      end
+      object SearchEdit: TEdit
+        Left = 75
+        Height = 25
+        Top = 0
+        Width = 183
+        Color = clMoneyGreen
+        Font.Color = clMaroon
+        Font.Height = 12
+        Font.Style = [fsBold]
+        OnExit = SearchEditExit
+        OnKeyDown = SearchEditKeyDown
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+    end
+    object Label2: TLabel
+      Left = 6
+      Height = 14
+      Top = -2
+      Width = 33
+      Caption = 'Title:'
+      Font.Color = clMaroon
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object TitleMemo: TMemo
+      Left = 8
+      Height = 42
+      Top = 14
+      Width = 550
+      Color = clMoneyGreen
+      Font.Color = clMaroon
+      Font.Height = 16
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 0
+    Height = 407
+    Top = 60
+    Width = 5
+  end
+  object ScrollButtonPanel: TPanel
+    Left = 704
+    Height = 407
+    Top = 60
+    Width = 100
+    Align = alRight
+    ClientHeight = 407
+    ClientWidth = 100
+    Color = clMoneyGreen
+    ParentColor = False
+    TabOrder = 3
+    object UpButton: TSpeedButton
+      Left = 8
+      Height = 30
+      Top = 168
+      Width = 80
+      Action = UpAction
+      Caption = '     &UP'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000137E2DFF117C2BFF0F7B29FF0D7A28FF0C79
+        27FF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000127E2DFF107D2BFF0E7B29FF0C7A27FF0B79
+        26FF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000127F2DFF107D2BFF0E7C28FF0C7A27FF0A79
+        25FF000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000012802DFF107E2BFF0E7C29FF0C7B27FF0B7A
+        26FF000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000012802DFF107F2BFF0E7D29FF0D7C28FF0B7A
+        26FF000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000013822EFF11802CFF0F7F2BFF0E7D29FF0D7B
+        28FF000000000000000000000000000000000000000000000000000000000000
+        0000188432FF178431FF158430FF14832FFF12822EFF11802CFF0F7E2AFF0E7C
+        29FF0E7B29FF0E7B29FF0F7B2AFF000000000000000000000000000000000000
+        000000000000178532FF168531FF158430FF14832FFF12812DFF117F2CFF107E
+        2BFF107D2BFF107C2BFF00000000000000000000000000000000000000000000
+        00000000000000000000178532FF168531FF158430FF14822FFF13802DFF127F
+        2DFF127E2CFF0000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000178532FF168431FF158330FF15812FFF1480
+        2FFF000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000178432FF168331FF168231FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000178332FF000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      ParentFont = False
+    end
+    object DownButton: TSpeedButton
+      Left = 8
+      Height = 30
+      Top = 208
+      Width = 80
+      Action = DownAction
+      Caption = '&DOWN'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000F7B2AFF000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000107C2BFF0E7B29FF0D7A27FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000127E2DFF107D2BFF0E7B28FF0C7A27FF0B79
+        26FF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000014802EFF127F2DFF107E2BFF0E7C29FF0C7A27FF0B79
+        26FF0A7925FF0000000000000000000000000000000000000000000000000000
+        000000000000168231FF15812FFF13802DFF107F2BFF0E7D29FF0C7B27FF0B7A
+        26FF0B7926FF0B7926FF00000000000000000000000000000000000000000000
+        0000178332FF178331FF158330FF13822EFF11802CFF0F7E2AFF0D7D29FF0C7B
+        27FF0C7A27FF0C7A27FF0D7A28FF000000000000000000000000000000000000
+        000000000000000000000000000014832FFF12812DFF10802CFF0F7E2AFF0E7C
+        29FF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000158430FF13822EFF12812DFF107F2BFF0F7E
+        2AFF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000158430FF14832FFF13822EFF12802DFF117E
+        2CFF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000168531FF158430FF14822FFF14812EFF137F
+        2DFF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000178532FF168431FF168330FF158130FF1480
+        2FFF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000188532FF178432FF178331FF178231FF1680
+        30FF000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      ParentFont = False
+    end
+    object TopSpeedButton: TSpeedButton
+      Left = 8
+      Height = 30
+      Top = 64
+      Width = 80
+      Action = ReloadAction
+      Caption = '&Top'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF003A87411D37823D70337E39B7307936EA2D7532FD2A702FFF276C
+        2CFF256929FF226526FF206223FF1E5F21FFFFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00429149393E8D45B05AA360FF6AB170FF75BC7CFF78BF7DFF76BE7CFF74BD
+        79FF71BC77FF70BB74FF6DB973FF206224FFFFFFFF00FFFFFF00FFFFFF00499C
+        511D46974EB06EB576FF85C78BFF78C17FFF7FC486FF7CC282FF79C180FF77BF
+        7EFF74BD7AFF72BD78FF70BB75FF236627FFFFFFFF00FFFFFF00FFFFFF004DA1
+        567068B270FF8BCB93FF89CA90FF7EC185FF59A260FF38853FFF35803BFF327B
+        38FF2F7734FF2C7331FF296E2DFF266B2AFFFFFFFF00FFFFFF00FFFFFF0051A6
+        5AB77FC287FF87CA90FF85C68CFF43944BE2408F478FFFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0054AC
+        5EEA90CE98FF91CF99FF72B97AFF4799508FFFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0058B1
+        62EA94D19CFF95D19EFF76BC7FFF4B9F548FFFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF0037823D7B337E3903FFFFFF00FFFFFF00FFFFFF00FFFFFF005BB5
+        66B78ACC93FF93D19DFF91CE9AFF4FA458E24CA0558FFFFFFF00FFFFFF00FFFF
+        FF00FFFFFF003B8841D237833E9FFFFFFF00FFFFFF00FFFFFF00FFFFFF005EB9
+        69707AC584FF9ED6A7FF9CD5A5FF92CF9AFF6DB876FF4CA055FF499C51FF4697
+        4EFF42924AFF5DA664FF5AA361FF38843E93FFFFFF00FFFFFF00FFFFFF0061BD
+        6C1D5FBA6AB088CC92FFA0D7A9FF96D3A0FF9BD4A3FF99D3A1FF96D19EFF93CF
+        9BFF90CE99FF8DCC95FF8ACA91FF5BA362FF38853F8AFFFFFF00FFFFFF00FFFF
+        FF0062BE6D395FBB6AB07BC585FF8DCE96FF98D3A1FF9CD5A5FF99D4A2FF97D2
+        9FFF94D09DFF91CF99FF8DCC94FF5FA867FF3C8A4384FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF0062BF6D1D60BB6B705DB868B75AB465EA57B062FF54AC5EFF51A7
+        5BFF4EA357FF69B371FF66AF6FFF44944C90FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF004FA358D24B9F549CFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF0052A95C784FA45803FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+      }
+      ParentFont = False
+    end
+    object PopupMenuSpeedButton: TSpeedButton
+      Left = 8
+      Height = 30
+      Top = 16
+      Width = 80
+      Action = MainMenuAction
+      Caption = '&Menu'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object FlowBasePanel: TPanel
+    Left = 5
+    Height = 407
+    Top = 60
+    Width = 699
+    Align = alClient
+    Caption = 'FlowBasePanel'
+    TabOrder = 1
+    OnMouseWheel = FlowBasePanelMouseWheel
+  end
+  object MenuPopupMenu: TPopupMenu
+    Left = 576
+    Top = 88
+    object SetPlayerMenuItem: TMenuItem
+      Action = SetPlayerAction
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+    object AddClipMenuItem: TMenuItem
+      Action = AddClipAction
+    end
+    object FindAndLoadMenuItem: TMenuItem
+      Action = LoadAllFromVideosFolderAction
+    end
+    object AddYTMenuItem: TMenuItem
+      Caption = 'Add &YouTube URL'
+      OnClick = AddYTMenuItemClick
+    end
+    object DeleteClipMenuItem: TMenuItem
+      Action = RemoveMarkedThumbsAction
+    end
+    object PopulateMenuItem: TMenuItem
+      Action = PopulateAction
+      Caption = '&Populate From Folder'
+    end
+    object HelpMenuItem: TMenuItem
+      Action = HelpAction
+    end
+    object AboutMenuItem: TMenuItem
+      Action = AboutAction
+    end
+    object ParentalControlMenuItem: TMenuItem
+      Action = ParentalControlAction
+    end
+    object ChangeParentalPinMenuItem: TMenuItem
+      Action = ChangeParentalPinAction
+    end
+    object PurgeMenuItem: TMenuItem
+      Action = PurgeAction
+    end
+    object AddTestDataMenuItem: TMenuItem
+      Action = AddTestDataAction
+    end
+  end
+  object MainActionList: TActionList
+    Left = 248
+    Top = 88
+    object AddClipAction: TAction
+      Category = 'General'
+      Caption = '&Add Clip'
+      OnExecute = AddClipActionExecute
+    end
+    object RemoveMarkedThumbsAction: TAction
+      Category = 'General'
+      Caption = '&Remove Marked Clip(s)'
+      OnExecute = RemoveMarkedThumbsActionExecute
+    end
+    object FileDropAction: TAction
+      Category = 'FileDrop'
+      Caption = 'File Drop Action'
+    end
+    object PopulateAction: TAction
+      Category = 'General'
+      Caption = '&Populate All'
+      OnExecute = PopulateActionExecute
+    end
+    object SetPlayerAction: TAction
+      Category = 'Player'
+      Caption = 'Set &Player'
+      OnExecute = SetPlayerActionExecute
+    end
+    object PlayerMenuItemsAction: TAction
+      Category = 'Player'
+      Caption = 'PlayerMenuItemsAction'
+    end
+    object UpAction: TAction
+      Category = 'Scroll'
+      Caption = 'UP'
+      OnExecute = UpActionExecute
+    end
+    object DownAction: TAction
+      Category = 'Scroll'
+      Caption = 'DN'
+      OnExecute = DownActionExecute
+    end
+    object MainMenuAction: TAction
+      Category = 'Menu'
+      Caption = 'Menu'
+      OnExecute = PopupMenuActionExecute
+    end
+    object QueuePlayAction: TAction
+      Category = 'Queue'
+      Caption = 'Queue Play'
+    end
+    object QueueClearAction: TAction
+      Category = 'Queue'
+      Caption = 'Queue Clear'
+    end
+    object HelpAction: TAction
+      Category = 'Help'
+      Caption = '&Help'
+    end
+    object AboutAction: TAction
+      Category = 'About'
+      Caption = 'A&bout'
+      OnExecute = AboutActionExecute
+    end
+    object LoadAllFromVideosFolderAction: TAction
+      Category = 'General'
+      Caption = '&Find And Load All Videos'
+      OnExecute = LoadAllFromVideosFolderActionExecute
+    end
+    object ParentalControlAction: TAction
+      Category = 'General'
+      Caption = '&Parental Control'
+      OnExecute = ParentalControlActionExecute
+    end
+    object ReloadAction: TAction
+      Category = 'General'
+      Caption = 'Top'
+      OnExecute = ReloadActionExecute
+    end
+    object ChangeParentalPinAction: TAction
+      Category = 'General'
+      Caption = '&Change Parental PIN'
+      OnExecute = ChangeParentalPinActionExecute
+    end
+    object AdditionalFilterAction: TAction
+      Category = 'Filter'
+      Caption = 'F'
+      OnExecute = AdditionalFilterActionExecute
+    end
+    object PurgeAction: TAction
+      Category = 'General'
+      Caption = 'P&urge'
+      OnExecute = PurgeActionExecute
+    end
+    object PageUpAction: TAction
+      Category = 'Scroll'
+      Caption = 'Page Up'
+      OnExecute = PageUpActionExecute
+    end
+    object PageDownAction: TAction
+      Category = 'Scroll'
+      Caption = 'Page Down'
+      OnExecute = PageDownActionExecute
+    end
+    object NextThumbAction: TAction
+      Category = 'Scroll'
+      Caption = 'Next Thumb'
+      OnExecute = NextThumbActionExecute
+    end
+    object PreviousThumbAction: TAction
+      Category = 'Scroll'
+      Caption = 'PreviousThumbAction'
+      OnExecute = PreviousThumbActionExecute
+    end
+    object NextRowAction: TAction
+      Category = 'Scroll'
+      Caption = 'Next Row'
+      OnExecute = NextRowActionExecute
+    end
+    object PreviousRowAction: TAction
+      Category = 'Scroll'
+      Caption = 'PreviousRowAction'
+      OnExecute = PreviousRowActionExecute
+    end
+    object ClearFilterAction: TAction
+      Caption = '&Clear'
+      OnExecute = ClearFilterActionExecute
+    end
+    object AddYouTubeURLAction: TAction
+      Caption = 'Add YouTube URL'
+      OnExecute = AddYouTubeURLActionExecute
+    end
+    object AddTestDataAction: TAction
+      Caption = 'Add Test &Data'
+      OnExecute = AddTestDataActionExecute
+    end
+  end
+  object ClipFileOpenDialog: TOpenDialog
+    InitialDir = './Youtube Downloads'
+    Left = 400
+    Top = 88
+  end
+  object SelectVideoDirectoryDialog: TSelectDirectoryDialog
+    Left = 248
+    Top = 152
+  end
+  object PlayerPopupMenu: TPopupMenu
+    Left = 720
+    Top = 88
+  end
+end
